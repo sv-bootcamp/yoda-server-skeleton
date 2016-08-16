@@ -5,6 +5,7 @@ const eslint		= require('gulp-eslint');
 const sourcemaps	= require('gulp-sourcemaps');
 const server		= require( 'gulp-develop-server');
 const runSequence	= require('run-sequence');
+const install		= require("gulp-install");
 
 const originalJs	= './src/**/**/*.js';
 
@@ -26,6 +27,11 @@ gulp.task('babel', () => {
 		.pipe(gulp.dest('dist-server'));
 });
 
+gulp.task('install', () => {
+	gulp.src('./package.json')
+	.pipe(install());
+});
+
 gulp.task('lint', () => {
 	return gulp.src(originalJs)
 		.pipe(eslint({configFile : './.eslintrc.json'}))
@@ -34,5 +40,5 @@ gulp.task('lint', () => {
 });
 
 gulp.task('default', () => {
-	runSequence('babel','server:start');
+	runSequence('install','babel','server:start');
 });
