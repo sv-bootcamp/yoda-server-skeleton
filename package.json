@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/sv-bootcamp/yoda-server-skeleton/issues"
   },
-  "homepage": "https://github.com/sv-bootcamp/yoda-server-skeleton#readme"
+  "homepage": "https://github.com/sv-bootcamp/yoda-server-skeleton#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "nodemon": "^1.10.0"
+  }
 }
