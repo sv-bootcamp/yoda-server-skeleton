@@ -1,3 +1,4 @@
 data/
 .c9/
 mongod
+node_modules/
