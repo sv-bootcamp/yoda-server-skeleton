@@ -1,4 +1,10 @@
-data/
+#Useless Folders
 .c9/
-mongod
 node_modules/
+dist-server/
+
+# DB Folder
+data/
+
+# scripts
+mongod

@@ -1,1 +1,0 @@
-JSON configuration goes here.
