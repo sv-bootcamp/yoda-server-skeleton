@@ -1,7 +1,8 @@
 'use strict'
-const router = function(app) {
-    app.get('/', (req,res) =>{
-        res.send('request URL : /');
-    });
-}
+import express from 'express'
+const router = express.Router()
+router.get('/', (req,res,next) => {
+    res.send('hello world')
+})
+
 export default router;

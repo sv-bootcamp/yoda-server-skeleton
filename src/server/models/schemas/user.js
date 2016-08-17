@@ -1,10 +1,10 @@
 'use strict'
-
 import mongoose from 'mongoose'
-const Schema = mongoose.Schema
+import Schema from 'mongoose.Schema'
+import co from 'co'
 
-let userSchema = new Schema({
-    // _id: String,
+export var userSchema = new Schema({
+    _id: String,
     userId: String,
     email: String,
     name: String,
@@ -14,10 +14,3 @@ let userSchema = new Schema({
     skills: String,
     regDate: { type: Date, default: Date.now() }
 })
-
-userSchema.set('toJSON', {
-	getters: true,
-	virtuals: true
-});
-
-export default mongoose.model('User', userSchema);
